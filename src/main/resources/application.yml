@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/querydsl
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: true
+        format_sql: true
+#        쿼리 dsl 로 실행되는 JPQL 을 로그로 보게해줌
+        use_sql_comments: true
+logging.level:
+  org.hibernate.SQL: debug
+#  로그로 남겨지는 쿼리의 물음표 파라미터값을 볼 수 있음
+  org.hibernate.type: trace
